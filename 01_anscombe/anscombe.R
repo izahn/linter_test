@@ -6,9 +6,10 @@ df <- anscombe
 df$id <- 1:nrow(df)
 df <- as.data.frame(df)
 
-long <-  melt(df, id.vars = "id",
-              measure.vars = patterns("x", "y"),
+long <-  melt(df, id.vars = "id", 
+              measure.vars = patterns("x", "y"), 
               value.name = c("x", "y"),
+
               variable.name = "dataset")
 
 library(ggplot2)
